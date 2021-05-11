@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:inputType="numberDecimal"
-        android:hint="Cost of Service" />
+        android:hint="Cost of Service"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -60,14 +60,26 @@
         android:text="Round up tip?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tip_options">
+        app:layout_constraintTop_toBottomOf="@id/tip_options"
+        />
 
-    </Switch>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/calculate_button"
+        app:layout_constraintTop_toBottomOf="@id/round_up_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
-
-
-
-
+    <TextView
+        android:id="@+id/tip_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip amout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
